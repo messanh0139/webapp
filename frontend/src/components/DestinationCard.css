@@ -1,0 +1,122 @@
+.destination-card {
+  background: var(--secondary-dark);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  transition: all var(--transition-normal);
+  cursor: pointer;
+}
+
+.destination-card:hover {
+  border-color: var(--accent-gold);
+  box-shadow: var(--shadow-gold);
+}
+
+.destination-image-wrapper {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.destination-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.destination-card:hover .destination-image {
+  transform: scale(1.1);
+}
+
+.destination-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(10, 10, 10, 0.8) 100%
+  );
+  pointer-events: none;
+}
+
+.destination-badge {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: var(--accent-gold);
+  color: var(--primary-dark);
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.destination-content {
+  padding: var(--spacing-lg);
+}
+
+.destination-name {
+  font-size: 1.75rem;
+  color: var(--accent-gold);
+  margin-bottom: var(--spacing-sm);
+}
+
+.destination-description {
+  color: var(--text-gray);
+  margin-bottom: var(--spacing-md);
+  line-height: 1.6;
+}
+
+.destination-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-md);
+  padding: var(--spacing-md) 0;
+  border-top: 1px solid rgba(212, 175, 55, 0.1);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.info-item svg {
+  color: var(--accent-gold);
+}
+
+.destination-btn {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-bronze));
+  color: var(--primary-dark);
+  text-align: center;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all var(--transition-normal);
+}
+
+.destination-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-gold);
+}
+
+@media (max-width: 768px) {
+  .destination-image-wrapper {
+    height: 250px;
+  }
+
+  .destination-content {
+    padding: var(--spacing-md);
+  }
+}

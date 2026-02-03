@@ -1,0 +1,117 @@
+.destinations-page {
+  min-height: 100vh;
+  background: var(--primary-dark);
+}
+
+.destinations-page.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  width: 60px;
+  height: 60px;
+  border: 5px solid rgba(212, 175, 55, 0.2);
+  border-top-color: var(--accent-gold);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.destinations-hero {
+  padding: calc(80px + var(--spacing-xl)) 0 var(--spacing-xl);
+  text-align: center;
+  background: linear-gradient(
+    180deg,
+    var(--secondary-dark) 0%,
+    var(--primary-dark) 100%
+  );
+}
+
+.destinations-hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  color: var(--accent-gold);
+  margin-bottom: var(--spacing-md);
+}
+
+.destinations-hero p {
+  font-size: 1.25rem;
+  color: var(--text-gray);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.destinations-content {
+  padding: var(--spacing-xl) 0;
+}
+
+.destinations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.destinations-info {
+  padding: var(--spacing-xl) 0;
+  background: linear-gradient(
+    180deg,
+    var(--primary-dark) 0%,
+    var(--secondary-dark) 100%
+  );
+}
+
+.destinations-info h2 {
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  color: var(--accent-gold);
+  margin-bottom: var(--spacing-lg);
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+}
+
+.info-card {
+  background: rgba(212, 175, 55, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 20px;
+  padding: var(--spacing-lg);
+  transition: all var(--transition-normal);
+}
+
+.info-card:hover {
+  background: rgba(212, 175, 55, 0.1);
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-gold);
+}
+
+.info-card h3 {
+  font-size: 1.5rem;
+  color: var(--accent-gold);
+  margin-bottom: var(--spacing-sm);
+}
+
+.info-card p {
+  color: var(--text-gray);
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .destinations-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
