@@ -30,7 +30,7 @@ DESTINATIONS = {
             "Spectacles du Moulin Rouge",
             "Architecture Haussmannienne"
         ],
-        "price": 500,
+        "price": 8500,
         "duration": "7 jours",
         "category": ["culturelle", "artistique", "raffinement", "urbaine"]
     },
@@ -45,7 +45,7 @@ DESTINATIONS = {
             "Faune et flore primitives",
             "Sécurité maximale garantie"
         ],
-        "price": 600,
+        "price": 15000,
         "duration": "5 jours",
         "category": ["aventure", "nature", "sauvage", "origines"]
     },
@@ -60,7 +60,7 @@ DESTINATIONS = {
             "Cathédrale Santa Maria del Fiore",
             "Marchés Renaissance"
         ],
-        "price": 550,
+        "price": 12000,
         "duration": "6 jours",
         "category": ["culturelle", "artistique", "architecture", "renaissance"]
     }
